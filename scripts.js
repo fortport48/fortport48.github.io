@@ -1,21 +1,15 @@
-function validateForm() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var errorMessage = document.getElementById("error-message");
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
 
-    // Simple validation for empty fields
-    if (username === "" || password === "") {
-        errorMessage.textContent = "Username and Password are required!";
-        return false;
-    }
-
-    // For demonstration, check if the username is 'admin' and password is 'password'
-    if (username === "admin" && password === "password") {
-        alert("Login successful!");
-         window.location.href = "welcome.html";
-        return true;
+    if (username === 'admin' && password === 'password') {
+        window.location.href = 'https://www.google.com';
     } else {
-        errorMessage.textContent = "Invalid Username or Password!";
-        return false;
+        errorMessage.style.display = 'block';
+        errorMessage.textContent = 'Invalid username or password';
     }
-}
+});
+
