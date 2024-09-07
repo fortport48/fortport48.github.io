@@ -1,6 +1,7 @@
 html {
     height: 100%;
   }
+  
   body {
     height: 100%;
     margin: 0;
@@ -43,22 +44,22 @@ html {
     opacity: 0;
   }
   
-  #index-second-line {
+  #error-msg-second-line {
     display: block;
   }
   
-  #index {
+  #login-form {
     align-self: flex-start;
     display: grid;
     justify-items: center;
     align-items: center;
   }
   
-  .index-field::placeholder {
+  .login-form-field::placeholder {
     color: #3a3a3a;
   }
   
-  .index-field {
+  .login-form-field {
     border: none;
     border-bottom: 1px solid #3a3a3a;
     margin-bottom: 10px;
@@ -67,7 +68,7 @@ html {
     padding: 0px 0px 5px 5px;
   }
   
-  #index-submit {
+  #login-form-submit {
     width: 100%;
     padding: 7px;
     border: none;
