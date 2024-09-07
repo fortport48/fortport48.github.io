@@ -1,15 +1,16 @@
-document.getElementById('loginForm').addEventListener('submit', function(e) {
+const loginForm = document.getElementById("login-form");
+const loginButton = document.getElementById("login-form-submit");
+const loginErrorMsg = document.getElementById("login-error-msg");
+
+loginButton.addEventListener("click", (e) => {
     e.preventDefault();
-    
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const errorMessage = document.getElementById('error-message');
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
 
-    if (username === 'admin' && password === 'password') {
-        window.location.href = 'https://www.google.com';
+    if (username === "user" && password === "web_dev") {
+        alert("You have successfully logged in.");
+        location.reload();
     } else {
-        errorMessage.style.display = 'block';
-        errorMessage.textContent = 'Invalid username or password';
+        loginErrorMsg.style.opacity = 1;
     }
-});
-
+})
